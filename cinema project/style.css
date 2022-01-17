@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    background-color: #242333;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.movie-container{
+    margin: 20px 0px;
+}
+.movie-container select{
+    background-color: #fff;;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 5px;
+    appearance: none;
+}
+.seat{
+    background-color: #444451;;
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border-radius: 10px 10px 0 0;
+}
+.row{
+    display: flex;
+}
+
+.seat.selected{
+    background-color: #6feaf6;
+}
+.seat.occupied{
+    background-color: #fff;
+}
+
+.seat:nth-child(2){
+    margin-right: 20px;
+}
+
+.seat:nth-last-child(2){
+    margin-left: 20px;
+}
+
+.seat:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: ease 2 00ms all;
+}
+.showcase .seat:hover{
+    cursor: unset;
+    transform: none;
+}
+
+.showcase{
+    background: rgba(0,0,0,0.1);
+    padding: 5px 10px;
+    color: #777;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+.showcase li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.showcase li small{
+    margin-left: 3px;
+}
+.screen{
+    background-color: #fff;
+    width: 100%;
+    height: 70px;
+    margin: 15px 0px;
+    transform: rotateX(-45deg);
+    box-shadow:  0 3px 10px rgba(255, 255, 255, .7);
+}
+.container{
+    perspective: 500px;
+}
+p.text span{
+    color: #6feaf6;
+}
